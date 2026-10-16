@@ -2,8 +2,6 @@ local mainMod = "SUPER"
 
 hl.bind(mainMod .. " + Return",     hl.dsp.exec_cmd("kitty"))
 hl.bind(mainMod .. " + Space",      hl.dsp.exec_cmd("pkill rofi || rofi -show drun"))
-hl.bind(mainMod .. " + O",          hl.dsp.exec_cmd("kitty -e yazi"))
-
 
 hl.bind(mainMod .. " + Backspace",  hl.dsp.window.close())
 
@@ -11,13 +9,10 @@ hl.bind(mainMod .. " + Comma",      hl.dsp.window.pseudo())
 hl.bind(mainMod .. " + Period",     hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + Semicolon",  hl.dsp.layout("togglesplit"))
 
-
+hl.bind(mainMod .. " + SHIFT + M",      hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'"))
 
 hl.bind(mainMod .. " + Escape",         hl.dsp.exec_cmd("pkill quickshell || quickshell"))
 hl.bind(mainMod .. " + SHIFT + Escape", hl.dsp.exec_cmd("pkill hyprpaper || hyprpaper"))
-
-hl.bind(mainMod .. " + SHIFT + M",      hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'"))
-hl.bind(" + ALT + F4 ",  				hl.dsp.exec_cmd("pkill nwg-bar || nwg-bar"))
 
 
 
@@ -31,10 +26,11 @@ hl.bind(mainMod .. " + CONTROL + right", hl.dsp.window.move({ direction = "right
 hl.bind(mainMod .. " + CONTROL + up",    hl.dsp.window.move({ direction = "up" }))
 hl.bind(mainMod .. " + CONTROL + down",  hl.dsp.window.move({ direction = "down" }))
 
-hl.bind(mainMod .. " + ALT + right", hl.dsp.window.resize({ x = 25, y = 0, relative = true }), { repeating = true })
-hl.bind(mainMod .. " + ALT + left",  hl.dsp.window.resize({ x = -25, y = 0, relative = true}), { repeating = true })
-hl.bind(mainMod .. " + ALT + up",    hl.dsp.window.resize({ x = 0, y = 25, relative = true}), { repeating = true })
-hl.bind(mainMod .. " + ALT + down",  hl.dsp.window.resize({ x = 0, y = -25, relative = true}), { repeating = true })
+hl.bind(mainMod .. " + ALT + right", hl.dsp.window.resize({ x = 25,  y = 0, relative = true }), { repeating = true })
+hl.bind(mainMod .. " + ALT + left",  hl.dsp.window.resize({ x = -25, y = 0, relative = true }), { repeating = true })
+hl.bind(mainMod .. " + ALT + up",    hl.dsp.window.resize({ x = 0, y = 25,  relative = true }), { repeating = true })
+hl.bind(mainMod .. " + ALT + down",  hl.dsp.window.resize({ x = 0, y = -25, relative = true }), { repeating = true })
+
 
 
 for i = 1, 10 do
@@ -46,13 +42,13 @@ end
 hl.bind(mainMod .. " + P",          hl.dsp.workspace.toggle_special("magic"))
 hl.bind(mainMod .. " + SHIFT + P",  hl.dsp.window.move({ workspace = "special:magic" }))
 
-hl.bind(mainMod .. " + SHIFT + up",     hl.dsp.focus({ workspace = "+1" }))
-hl.bind(mainMod .. " + SHIFT + down",   hl.dsp.focus({ workspace = "-1" }))
+hl.bind(mainMod .. " + Page_Up",     hl.dsp.focus({ workspace = "-1" }))
+hl.bind(mainMod .. " + Page_Down",   hl.dsp.focus({ workspace = "+1" }))
 
 
 
-hl.bind(mainMod .. " + mouse_down", hl.dsp.focus({ workspace = "+1" }))
-hl.bind(mainMod .. " + mouse_up",   hl.dsp.focus({ workspace = "-1" }))
+hl.bind(mainMod .. " + mouse_up",   hl.dsp.focus({ workspace = "+1" }))
+hl.bind(mainMod .. " + mouse_down", hl.dsp.focus({ workspace = "-1" }))
 
 hl.bind(mainMod .. " + mouse:272", hl.dsp.window.drag(),   { mouse = true })
 hl.bind(mainMod .. " + mouse:273", hl.dsp.window.resize(), { mouse = true })
