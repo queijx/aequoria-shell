@@ -13,13 +13,6 @@ PanelWindow {
         bottom: true
     }
 
-    //margins {
-        //top: 5
-        //left: 10
-        //right: 10
-        //bottom: 5
-    //}
-
     implicitHeight: 34
     color: "transparent"
 
@@ -34,10 +27,6 @@ PanelWindow {
             GradientStop {position: 0.5; color: "#28808080"}
             GradientStop {position: 0.0; color: "#80ffffff"}
         }
-
-        //radius: 4
-        //border.color: "#ffffff"
-        //border.width: 1
 
         Rectangle {
             anchors {
@@ -125,7 +114,7 @@ PanelWindow {
                 font.pixelSize: 18
                 color: "#ffffff"
 
-                text: "50%"
+                text: " "
             }
 
             Process {
