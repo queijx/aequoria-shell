@@ -1,2 +1,2 @@
 # aequoria-shell
-Frutiger Aero Dotfiles for Hyprland ( under dev )
+Frutiger Aero Dotfiles for Hyprland ( under construction )
